@@ -8,6 +8,8 @@ import DefaultIcon from 'Components/Leaflet/Marker/Default/Default'
 
 import LocationMarker from 'Components/Leaflet/Marker/Location/Location'
 
+import Minimap from 'Components/Leaflet/Minimap/Minimap'
+
 const App = () => {
 	return (
 		<MapContainer
@@ -29,6 +31,7 @@ const App = () => {
 				</Popup>
 			</Marker>
 			<LocationMarker />
+			<Minimap position='topright' />
 		</MapContainer>
 	)
 }
