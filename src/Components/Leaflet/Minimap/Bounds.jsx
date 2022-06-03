@@ -4,7 +4,7 @@ import { useMap, useMapEvent, Rectangle } from 'react-leaflet'
 import { useEventHandlers } from '@react-leaflet/core'
 
 const Bounds = ({ parentMap, zoom }) => {
-	const [bounds, setBounds] = useState(parentMap.getBounds())
+	const [Bounds, SetBounds] = useState(parentMap.getBounds())
 
 	const minimap = useMap()
 
@@ -16,7 +16,7 @@ const Bounds = ({ parentMap, zoom }) => {
 	)
 
 	const OnChange = useCallback(() => {
-		setBounds(parentMap.getBounds())
+		SetBounds(parentMap.getBounds())
 
 		// Update the minimap's view to match the parent map's center and zoom
 		minimap.setView(parentMap.getCenter(), zoom)
@@ -31,7 +31,7 @@ const Bounds = ({ parentMap, zoom }) => {
 	useMapEvent('click', OnClick)
 	useEventHandlers({ instance: parentMap }, Handlers)
 
-	return <Rectangle bounds={bounds} pathOptions={{ weight: 1 }} />
+	return <Rectangle bounds={Bounds} pathOptions={{ weight: 1 }} />
 }
 
 export default Bounds
