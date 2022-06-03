@@ -6,6 +6,8 @@ import 'leaflet/dist/leaflet.css'
 
 import DefaultIcon from 'Components/Leaflet/Marker/Default/Default'
 
+import LocationMarker from 'Components/Leaflet/Marker/Location/Location'
+
 const App = () => {
 	return (
 		<MapContainer
@@ -26,6 +28,7 @@ const App = () => {
 					A pretty CSS3 popup. <br /> Easily customizable.
 				</Popup>
 			</Marker>
+			<LocationMarker />
 		</MapContainer>
 	)
 }
