@@ -14,7 +14,7 @@ const App = () => {
 		<MapContainer
 			center={[0, 0]}
 			zoom={13}
-			scrollWheelZoom={false}
+			scrollWheelZoom
 			style={{
 				width: '100vw',
 				height: '100vh',
